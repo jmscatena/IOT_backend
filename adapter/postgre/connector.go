@@ -1,4 +1,4 @@
-package postgres
+package postgre
 
 import (
 	"context"
@@ -35,11 +35,11 @@ type PoolInterface interface {
 	BeginTxFunc(ctx context.Context, txOptions pgx.TxOptions, f func(pgx.Tx) error) error
 }
 
-// GetConnection return connection pool from postgres drive PGX
+// GetConnection return connection pool from postgre drive PGX
 func GetConnection(context context.Context) *pgxpool.Pool {
 	databaseURL := viper.GetString("database.url")
 
-	conn, err := pgxpool.Connect(context, "postgres"+databaseURL)
+	conn, err := pgxpool.Connect(context, "postgre"+databaseURL)
 
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Unable to connect to database: %v\n", err)

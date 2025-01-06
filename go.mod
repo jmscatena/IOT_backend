@@ -5,7 +5,9 @@ go 1.22.0
 toolchain go1.22.3
 
 require (
+	github.com/booscaaa/go-paginate v0.0.12
 	github.com/golang-migrate/migrate/v4 v4.18.1
+	github.com/gorilla/mux v1.7.4
 	github.com/jackc/pgconn v1.14.3
 	github.com/jackc/pgx/v4 v4.18.3
 	github.com/spf13/viper v1.19.0
